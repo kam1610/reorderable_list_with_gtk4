@@ -1,0 +1,28 @@
+label {
+  background-color: transparent;
+  padding-left: 8px;
+  margin : 1px;
+}
+
+listview {
+ background-color: azure;
+ border-width: 2px;
+ border-color: red;
+ padding: 0;
+ margin: 0;
+}
+
+expander {
+  padding: 0;
+  margin: 0;
+}
+
+treeexpander.indicate_upper{ border-top   : 3px solid orange; }
+treeexpander.indicate_lower{ border-bottom: 3px solid orange; }
+label.indicate_upper       { border-top   : 3px solid green; }
+label.indicate_lower       { border-bottom: 3px solid green; }
+
+.vertical_text_box {
+    color: yellow;
+    writing-mode: vertical-rl;
+}

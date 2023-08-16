@@ -1,0 +1,15 @@
+[package]
+name = "reorderable_list_with_gtk4"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gdk4 = "0.6.3"
+glib-sys = "0.17.4"
+gtk = { version = "0.6.6", package = "gtk4", features = ["v4_8"] }
+pango = "0.17.4"
+pangocairo = "0.17.0"
+xmltree = "0.10.3"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
