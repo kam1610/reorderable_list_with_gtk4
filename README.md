@@ -1,6 +1,6 @@
 # Summary
 
-This is an practice of tree list with Gtk4 and Rust which can be reorderable by drag and drop.
+This is a practice of tree list with Gtk4 and Rust which can be reorderable by drag and drop.
 
 # Drag and drop
 
