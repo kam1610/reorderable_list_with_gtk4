@@ -12,8 +12,8 @@ use crate::scenario_node_object::add_child;
 use crate::scenario_node_object::remove_node;
 use crate::scenario_node::ScenarioNode;
 use crate::scenario_node::BranchType;
-use gdk4::prelude::ListModelExt;
-use gdk4::prelude::Cast;
+use gtk::gdk::prelude::ListModelExt;
+use gtk::gdk::prelude::Cast;
 
 // operation_history
 #[derive(Debug, Clone, Copy)]

@@ -21,7 +21,7 @@ use crate::operation_history::TreeManipulationHandle;
 
 use crate::isv2_button::Isv2Button;
 
-use gdk4::Display;
+use gtk::gdk::Display;
 use gtk::{
     gio, glib, Application, ApplicationWindow, Label, ListView, PolicyType,
     ScrolledWindow, SignalListItemFactory, SingleSelection,
@@ -33,8 +33,8 @@ use gtk::{
 use gtk::{prelude::*, ListItem, DragSource};
 
 mod integer_object;
-use gdk4::ContentProvider;
-use gdk4::DragAction;
+use gtk::gdk::ContentProvider;
+use gtk::gdk::DragAction;
 use gtk::DropTarget;
 use glib::value::*;
 
@@ -93,7 +93,7 @@ fn my_creator(obj: &Object) -> Option<ListModel>{
 
     let sn= obj.downcast_ref::<ScenarioNodeObject>().expect("ScenarioNodeObject is expected");
     if let Some(c) = (*sn.get_node().child.borrow_mut()).as_ref() {
-        let model = gio::ListStore::new(ScenarioNodeObject::static_type());
+        let model = gio::ListStore::new::<ScenarioNodeObject>();
 
         append_neighbors(&model, c.clone(), 0);
 
@@ -439,7 +439,7 @@ fn label_drop_function(d: &DropTarget, v: &Value, _x: f64, y: f64) -> bool{
 // build_ui ////////////////////////////////////////////////
 fn build_ui(app: &Application) {
 
-    let model = gio::ListStore::new(ScenarioNodeObject::static_type());
+    let model = gio::ListStore::new::<ScenarioNodeObject>();
 
     let o_node1   = ScenarioNodeObject::new_with_seq_id(0, 1  );
     let o_node2   = ScenarioNodeObject::new_with_seq_id(0, 2  ); o_node2.set_parent( o_node1.get_node() ); o_node2.set_bt(BranchType::Neighbor);
